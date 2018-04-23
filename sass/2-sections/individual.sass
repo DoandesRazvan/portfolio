@@ -1,0 +1,171 @@
+@import '../0-utilities/_base.sass'
+@import '../0-utilities/_variables.sass'
+
+.project
+  display: flex
+  width: 100vw
+  height: 100vh
+  background: $beige
+
+  &--overview, &--information
+    display: flex
+    width: 50%
+    height: 100%
+
+  &--overview
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    background: url('https://cdn.pixabay.com/photo/2015/05/31/15/02/bokeh-792083_960_720.jpg')
+      repeat: no-repeat
+      size: cover
+      position: center
+
+    box-shadow: 8px 0 30px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+    &--scroll-line
+      display: none
+      align-self: center
+      width: 2px
+      height: 100px
+      margin-top: auto
+      background: $faded-white
+
+  &--information
+    flex-direction: column
+    padding: 20px
+
+    &--heading, &--tools
+      margin: 0
+
+      font-family: $main
+      text-transform: uppercase
+
+    &--heading
+      font-size: 100px
+
+    &--delimiter
+      width: 30%
+      
+      margin-left: 0
+
+      border: solid 5px $black
+
+    &--tools
+      margin-top: 30px
+
+      font:
+        weight: 600
+        size: 30px
+
+    &--description
+      margin-top: 80px
+
+      font:
+        family: $secondary
+        size: 30px
+      color: $gray
+
+  .buttons
+    margin-top: auto
+
+    &--github, &--live
+      width: 330px
+      height: 70px
+      background: $black
+      
+      font:
+        family: $main
+        weight: 600
+        size: 30px
+      color: $beige
+
+      border: none
+        radius: 5px
+
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+
+      cursor: pointer
+
+      transition: all 0.15s ease-in-out
+
+      &:hover
+        background: $purple
+
+    &--live
+      margin-left: 40px
+
+//move these to their appropriate classes
+@media (max-width: 1610px)
+  .project
+    flex-direction: column
+    height: auto
+
+    &--overview, &--information
+      width: 100%
+      min-height: 100vh
+      
+    &--overview
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+      &--devices
+        margin-top: auto
+        width: 400px
+
+      &--scroll-line
+        display: inline-block
+
+    &--information
+      align-items: center
+
+      &--heading, &--tools
+        text-align: center
+
+      &--delimiter
+        margin: 0 auto
+        width: 20%
+
+@media (max-width: 1350px)
+  .project--information
+    &--heading
+      font-size: 60px
+
+    &--delimiter
+      margin-top: 15px
+
+    &--tools
+      font-size: 22px
+
+    &--description
+      font-size: 25px
+
+@media (max-width: 865px)
+  .project 
+    &--information--heading
+      font-size: 45px
+
+    .buttons
+      &--github, &--live
+        width: 240px
+        height: 50px
+
+        font-size: 22px
+
+@media (max-width: 675px)
+  .project--overview--devices
+    width: 350px
+
+@media (max-width: 560px)
+  .project .buttons
+    display: flex
+    flex-direction: column
+    margin-top: 60px
+
+    &--live
+      margin:
+        left: 0
+        top: 20px
+
+@media (max-width: 450px)
+  .project--overview--devices
+    width: 250px

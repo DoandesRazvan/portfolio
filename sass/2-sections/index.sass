@@ -1,0 +1,441 @@
+@import '../0-utilities/_base.sass'
+@import '../0-utilities/_variables.sass'
+
+// common styles
+.projects--heading, .skills--heading
+  font:
+    family: $main
+    weight: 700
+    size: 40px
+  color: $gray
+  text-transform: uppercase
+
+.cover
+  @extend %padding
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 100vh
+  background: $beige
+
+  &--menu-trigger
+    position: relative
+    align-self: flex-end
+    margin-bottom: 0
+    z-index: 3
+
+    font:
+      family: $main
+      weight: 700
+      size: 40px
+    color: $gray
+
+    cursor: pointer
+    user-select: none
+
+    &--icon
+      margin-left: 20px
+      color: lighten($gray, 10%)
+
+    &:hover
+      color: darken($gray, 10%)
+
+  &--menu-overlay
+    position: absolute
+    display: none
+    width: 100vw
+    height: 100vh
+    top: 0
+    right: 0
+    z-index: 1
+    background: rgba(0, 0, 0, 0.5)
+
+  &--menu
+    @extend %padding
+
+    display: none
+    justify-content: center
+    align-items: flex-end
+    flex-direction: column
+    position: absolute
+    width: 500px
+    height: 100vh
+    right: 0
+    z-index: 2
+    background: $dark-beige
+
+    user-select: none
+
+    &--link
+      margin-top: 40px
+
+      font:
+        family: $main
+        weight: 600
+        size: 60px
+      text-decoration: none
+      color: $black
+
+      &:first-child
+        margin-top: 0
+
+      &:hover
+        text-decoration: underline
+    
+    @media (max-width: 800px) and (orientation: landscape)
+      &--link
+        margin-top: 10px
+
+        font-size: 40px
+
+        &:first-child
+          margin-top: 40px
+
+    @media (max-width: 500px) and (orientation: portrait)
+      align-items: center
+      width: 100%
+
+      &--link
+        font-size: 40px 
+
+  &--content
+    margin-top: auto
+
+    &--small-heading, &--heading
+      margin-top: 0
+      
+      font-family: $secondary
+
+    &--small-heading
+      font:
+        weight: 400
+        size: 40px
+      color: $gray
+
+    &--heading
+      margin-bottom: 0
+
+      font-size: 60px
+      color: $black
+    
+  &--scroll-line
+    align-self: center
+    width: 2px
+    height: 100px
+    margin-top: auto
+    background: $gray
+
+.projects
+  @extend %padding
+
+  padding-top: 60px
+  background: $beige
+
+  &--heading
+    margin-bottom: 20px
+
+  .project
+    position: relative
+    margin-top: 400px
+
+    &:nth-child(2)
+      margin-top: 0
+
+    &--title, &--description
+      position: absolute
+      right: 0
+      margin: 0
+      transform: translateY(-50%)
+
+      font-family: $secondary
+
+    &--image
+      height: 750px
+
+      border: solid 20px $dark-beige
+
+      box-shadow: 0 20px 70px rgba($gray, 0.25)
+
+    &--title
+      top: 50%
+        
+      font-size: 220px
+      text-transform: uppercase
+      color: white
+
+    &--description
+      top: 75%
+      width: calc(100% - 1125px - 20px)
+
+      font:
+        style: italic
+        weight: bold
+        size: 40px
+      text-align: left
+      color: $black
+
+    &--details-button // work on the alignment
+      position: absolute
+      top: 88%
+      left: calc(1125px + 20px)
+      width: 300px
+      height: 50px
+      background: $black
+      
+      font:
+        family: $main
+        weight: 600
+        size: 30px
+      text:
+        align: center
+        decoration: none
+      line-height: 50px
+      color: $beige
+
+      border: none
+        radius: 5px
+
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+
+      cursor: pointer
+      transition: all 0.3s ease-in-out
+
+      &:hover
+        background: $purple
+
+  &--more
+    display: block
+    margin-top: 100px
+
+    font:
+      family: $main
+      weight: 600
+      size: 30px
+    text:
+      decoration: none
+      align: center
+    color: $black
+
+    &:hover
+      text-decoration: underline
+
+.skills
+  @extend %padding
+
+  padding:
+    top: 400px
+    bottom: 100px
+  background: $beige
+
+  &--heading
+    margin:
+      top: 0
+      bottom: 100px
+
+  .icons
+    display: flex
+    justify-content: center
+
+    min-height: 100px // change this
+    background: $beige
+
+    &--icon
+      width: 100px
+      margin-left: 50px
+
+      text-align: center
+
+      &:first-child
+        margin-left: 0
+
+.email
+  padding: 0 20px
+
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 400px
+  background: $black
+
+  text-decoration: none
+
+  transition: all 0.15s ease-in-out
+
+  &:hover
+    background: darken($black, 10%)
+
+  &--address
+    margin: 0
+
+    font:
+      family: $main
+      size: 60px
+    color: $beige
+
+    @media (max-width: 1300px)
+      font-size: 40px
+
+    @media (max-width: 795px)
+      font-size: 30px
+
+  @media (max-width: 646px)
+    height: 200px
+
+    &--address
+      font-size: 20px
+    
+  @media (max-width: 337px) // had to put it here to override specificity of the one above
+    &--address
+      font-size: 16px
+
+.social
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100px
+  background: darken($black, 5%)
+
+  &--icon
+    margin-left: 20px
+
+    text-decoration: none
+    color: $dark-beige
+
+    transition: all 0.15s ease-in-out
+
+    &:hover
+      color: $beige
+
+    &:first-child
+      margin-left: 0
+
+@media (max-width: 1648px)
+  .projects
+    display: flex
+    align-items: center
+    flex-direction: column
+
+    .project
+      display: flex
+      align-items: center
+      flex-direction: column
+
+      &--description, &--details-button
+        position: initial
+      
+      &--title
+        display: none
+
+      &--image
+        height: 600px
+
+      &--description
+        width: auto
+        margin: 45px 0 15px
+
+        text-align: center
+
+  .skills
+    display: flex
+    align-items: center
+    flex-direction: column
+
+    .icons
+      display: flex
+      align-items: center
+      flex-direction: column
+
+      &--icon
+        margin:
+          top: 50px
+          left: 0
+
+        &:first-child
+          margin-top: 0
+
+@media (max-width: 1080px)
+  .projects--heading, .skills--heading
+    font-size: 30px
+
+  .projects .project
+    &--description, &--details-button
+      position: initial
+
+    &--image
+      height: 400px
+
+    &--description
+      font-size: 25px
+
+@media (max-width: 965px)
+  .cover
+    &--menu-trigger
+      font-size: 20px
+
+      &--icon
+        margin-left: 15px
+
+    &--content
+      &--small-heading
+        font-size: 20px
+
+      &--heading
+        font-size: 40px
+
+@media (max-width: 780px)
+  .cover, .cover--menu, .projects, .skills
+    padding:
+      left: 20px
+      right: 20px
+
+@media (max-width: 625px)
+  .projects .project--image
+    height: 300px
+
+@media (max-width: 544px) 
+  .cover
+    &--menu-trigger
+      font-size: 15px
+
+      &--icon
+        margin-left: 10px
+
+    &--content
+      &--small-heading
+        font-size: 15px
+
+      &--heading
+        font-size: 30px
+
+@media (max-width: 475px)
+  .projects--heading, .skills--heading
+      font-size: 25px
+      
+  .projects 
+    .project
+      margin-top: 200px
+
+      &--image
+        height: 198px
+
+      &--description
+        margin: 40px 0 10px
+
+        font-size: 20px
+
+      &--details-button
+        width: 160px
+        height: 30px
+
+        line-height: 30px
+        font-size: 15px
+    
+    &--more
+      font-size: 20px
+
+  .skills
+    padding-top: 200px
+
+    &--heading
+      margin-bottom: 50px

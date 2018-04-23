@@ -1,0 +1,160 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #F0EDE6; }
+  .project--overview, .project--information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    height: 100%; }
+  .project--overview {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: url("https://cdn.pixabay.com/photo/2015/05/31/15/02/bokeh-792083_960_720.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    -webkit-box-shadow: 8px 0 30px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    .project--overview--scroll-line {
+      display: none;
+      -ms-flex-item-align: center;
+      align-self: center;
+      width: 2px;
+      height: 100px;
+      margin-top: auto;
+      background: #F2F3F4; }
+  .project--information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px; }
+    .project--information--heading, .project--information--tools {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase; }
+    .project--information--heading {
+      font-size: 100px; }
+    .project--information--delimiter {
+      width: 30%;
+      margin-left: 0;
+      border: solid 5px #212121; }
+    .project--information--tools {
+      margin-top: 30px;
+      font-weight: 600;
+      font-size: 30px; }
+    .project--information--description {
+      margin-top: 80px;
+      font-family: "Vollkorn", serif;
+      font-size: 30px;
+      color: #6D6E64; }
+  .project .buttons {
+    margin-top: auto; }
+    .project .buttons--github, .project .buttons--live {
+      width: 330px;
+      height: 70px;
+      background: #212121;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      color: #F0EDE6;
+      border: none;
+        border-radius: 5px;
+      -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      cursor: pointer;
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out; }
+      .project .buttons--github:hover, .project .buttons--live:hover {
+        background: #913175; }
+    .project .buttons--live {
+      margin-left: 40px; }
+
+@media (max-width: 1610px) {
+  .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto; }
+    .project--overview, .project--information {
+      width: 100%;
+      min-height: 100vh; }
+    .project--overview {
+      -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+      .project--overview--devices {
+        margin-top: auto;
+        width: 400px; }
+      .project--overview--scroll-line {
+        display: inline-block; }
+    .project--information {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .project--information--heading, .project--information--tools {
+        text-align: center; }
+      .project--information--delimiter {
+        margin: 0 auto;
+        width: 20%; } }
+
+@media (max-width: 1350px) {
+  .project--information--heading {
+    font-size: 60px; }
+  .project--information--delimiter {
+    margin-top: 15px; }
+  .project--information--tools {
+    font-size: 22px; }
+  .project--information--description {
+    font-size: 25px; } }
+
+@media (max-width: 865px) {
+  .project--information--heading {
+    font-size: 45px; }
+  .project .buttons--github, .project .buttons--live {
+    width: 240px;
+    height: 50px;
+    font-size: 22px; } }
+
+@media (max-width: 675px) {
+  .project--overview--devices {
+    width: 350px; } }
+
+@media (max-width: 560px) {
+  .project .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 60px; }
+    .project .buttons--live {
+      margin-left: 0;
+      margin-top: 20px; } }
+
+@media (max-width: 450px) {
+  .project--overview--devices {
+    width: 250px; } }
