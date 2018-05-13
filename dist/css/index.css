@@ -118,7 +118,15 @@ body {
     .cover--content--heading {
       margin-bottom: 0;
       font-size: 60px;
-      color: #212121; }
+      color: #454640; }
+      .cover--content--heading--highlight:first-child {
+        color: #002B7F; }
+      .cover--content--heading--highlight:nth-child(2) {
+        color: #FCD116; }
+      .cover--content--heading--highlight:nth-child(3) {
+        color: #CE1126; }
+      .cover--content--heading--highlight:last-child {
+        color: #454640; }
   .cover--scroll-line {
     -ms-flex-item-align: center;
     align-self: center;
@@ -157,8 +165,7 @@ body {
     .projects .project--description {
       top: 75%;
       width: calc(100% - 1125px - 20px);
-      font-style: italic;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 40px;
       text-align: left;
       color: #212121; }
@@ -354,7 +361,7 @@ body {
 
 @media (max-width: 965px) {
   .cover--menu-trigger {
-    font-size: 20px; }
+    font-size: 30px; }
     .cover--menu-trigger--icon {
       margin-left: 15px; }
   .cover--content--small-heading {

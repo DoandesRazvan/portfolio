@@ -82,6 +82,10 @@
 
       &:hover
         text-decoration: underline
+
+    // @media (max-width: 800px) and (orientation: landscape)
+    //   &--link
+    //     font-size: 30px
     
     @media (max-width: 800px) and (orientation: landscape)
       &--link
@@ -97,7 +101,7 @@
       width: 100%
 
       &--link
-        font-size: 40px 
+        font-size: 40px
 
   &--content
     margin-top: auto
@@ -117,8 +121,21 @@
       margin-bottom: 0
 
       font-size: 60px
-      color: $black
-    
+      color: darken($gray, 15%)
+
+      &--highlight
+        &:first-child
+          color: $blue
+
+        &:nth-child(2)
+          color: $yellow
+
+        &:nth-child(3)
+          color: $red
+
+        &:last-child
+          color: darken($gray, 15%)
+
   &--scroll-line
     align-self: center
     width: 2px
@@ -169,8 +186,7 @@
       width: calc(100% - 1125px - 20px)
 
       font:
-        style: italic
-        weight: bold
+        weight: 600
         size: 40px
       text-align: left
       color: $black
@@ -371,7 +387,7 @@
 @media (max-width: 965px)
   .cover
     &--menu-trigger
-      font-size: 20px
+      font-size: 30px
 
       &--icon
         margin-left: 15px
