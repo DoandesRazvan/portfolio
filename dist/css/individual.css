@@ -12,7 +12,8 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background: #F0EDE6; }
+  background-image: url("../img/cover.png");
+  background-size: cover; }
   .project--overview, .project--information {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -30,12 +31,14 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background: url("https://cdn.pixabay.com/photo/2015/05/31/15/02/bokeh-792083_960_720.jpg");
+    background: url("../img/cakefactoryblur.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
     -webkit-box-shadow: 8px 0 30px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     box-shadow: 8px 0 30px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    .project--overview--devices {
+      width: 1200px; }
     .project--overview--scroll-line {
       display: none;
       -ms-flex-item-align: center;
@@ -107,7 +110,7 @@ body {
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
       .project--overview--devices {
         margin-top: auto;
-        width: 400px; }
+        width: 1400px; }
       .project--overview--scroll-line {
         display: inline-block; }
     .project--information {
@@ -130,6 +133,10 @@ body {
   .project--information--description {
     font-size: 25px; } }
 
+@media (max-width: 1350px) {
+  .project--overview--devices {
+    width: 1000px; } }
+
 @media (max-width: 865px) {
   .project--information--heading {
     font-size: 45px; }
@@ -140,7 +147,7 @@ body {
 
 @media (max-width: 675px) {
   .project--overview--devices {
-    width: 350px; } }
+    width: 700px; } }
 
 @media (max-width: 560px) {
   .project .buttons {
@@ -158,4 +165,4 @@ body {
 
 @media (max-width: 450px) {
   .project--overview--devices {
-    width: 250px; } }
+    width: 480px; } }

@@ -17,7 +17,10 @@
   flex-direction: column
   justify-content: center
   height: 100vh
-  background: $beige
+  background:
+    image: url('../img/cover.png')
+    size: cover
+    position: center
 
   &--menu-trigger
     position: relative
@@ -82,10 +85,6 @@
 
       &:hover
         text-decoration: underline
-
-    // @media (max-width: 800px) and (orientation: landscape)
-    //   &--link
-    //     font-size: 30px
     
     @media (max-width: 800px) and (orientation: landscape)
       &--link
@@ -392,9 +391,12 @@
       &--icon
         margin-left: 15px
 
+    &--menu--link
+      font-size: 50px
+
     &--content
       &--small-heading
-        font-size: 20px
+        font-size: 30px
 
       &--heading
         font-size: 40px
@@ -409,20 +411,17 @@
   .projects .project--image
     height: 300px
 
+    border-width: 15px
+
 @media (max-width: 544px) 
-  .cover
-    &--menu-trigger
-      font-size: 15px
+  .cover--content
+    &--small-heading
+      margin-bottom: 5px
+      
+      font-size: 20px
 
-      &--icon
-        margin-left: 10px
-
-    &--content
-      &--small-heading
-        font-size: 15px
-
-      &--heading
-        font-size: 30px
+    &--heading
+      font-size: 30px
 
 @media (max-width: 475px)
   .projects--heading, .skills--heading
@@ -434,6 +433,8 @@
 
       &--image
         height: 198px
+
+        border-width: 10px
 
       &--description
         margin: 40px 0 10px

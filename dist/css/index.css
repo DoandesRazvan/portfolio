@@ -29,7 +29,9 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   height: 100vh;
-  background: #F0EDE6; }
+  background-image: url("../img/cover.png");
+  background-size: cover;
+  background-position: center; }
   .cover--menu-trigger {
     position: relative;
     -ms-flex-item-align: end;
@@ -364,8 +366,10 @@ body {
     font-size: 30px; }
     .cover--menu-trigger--icon {
       margin-left: 15px; }
+  .cover--menu--link {
+    font-size: 50px; }
   .cover--content--small-heading {
-    font-size: 20px; }
+    font-size: 30px; }
   .cover--content--heading {
     font-size: 40px; } }
 
@@ -376,15 +380,13 @@ body {
 
 @media (max-width: 625px) {
   .projects .project--image {
-    height: 300px; } }
+    height: 300px;
+    border-width: 15px; } }
 
 @media (max-width: 544px) {
-  .cover--menu-trigger {
-    font-size: 15px; }
-    .cover--menu-trigger--icon {
-      margin-left: 10px; }
   .cover--content--small-heading {
-    font-size: 15px; }
+    margin-bottom: 5px;
+    font-size: 20px; }
   .cover--content--heading {
     font-size: 30px; } }
 
@@ -394,7 +396,8 @@ body {
   .projects .project {
     margin-top: 200px; }
     .projects .project--image {
-      height: 198px; }
+      height: 198px;
+      border-width: 10px; }
     .projects .project--description {
       margin: 40px 0 10px;
       font-size: 20px; }
